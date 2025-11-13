@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+
+// Class template
+template <class T>
+class Calculator {
+    T num1, num2;
+
+public:
+    Calculator(T n1, T n2) {
+        num1 = n1;
+        num2 = n2;
+    }
+
+    void displayResult() {
+        cout << "Numbers are: " << num1 << " and " << num2 << endl;
+        cout << "Addition = " << num1 + num2 << endl;
+        cout << "Subtraction = " << num1 - num2 << endl;
+        cout << "Multiplication = " << num1 * num2 << endl;
+        cout << "Division = " << num1 / num2 << endl;
+    }
+};
+
+int main() {
+    cout << "Integer results:" << endl;
+    Calculator<int> intCalc(10, 2);
+    intCalc.displayResult();
+
+    cout << "\nFloat results:" << endl;
+    Calculator<float> floatCalc(5.5, 1.5);
+    floatCalc.displayResult();
+
+    return 0;
+}
+
+OUTPUT
+Integer results:
+Numbers are: 10 and 2
+Addition = 12
+Subtraction = 8
+Multiplication = 20
+Division = 5
+
+Float results:
+Numbers are: 5.5 and 1.5
+Addition = 7
+Subtraction = 4
+Multiplication = 8.25
+Division = 3.66667
