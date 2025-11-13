@@ -1,0 +1,58 @@
+#include <iostream>
+using namespace std;
+
+class Complex {
+private:
+    float real;
+    float imag;
+
+public:
+    // Function to input complex number
+    void getData() {
+        cout << "Enter real part: ";
+        cin >> real;
+        cout << "Enter imaginary part: ";
+        cin >> imag;
+    }
+
+    // Operator overloading for '+'
+    Complex operator + (Complex obj) {
+        Complex temp;
+        temp.real = real + obj.real;
+        temp.imag = imag + obj.imag;
+        return temp;
+    }
+
+    // Function to display complex number
+    void display() {
+        cout << real << " + " << imag << "i" << endl;
+    }
+};
+
+int main() {
+    Complex c1, c2, result;
+
+    cout << "--- Enter first complex number ---" << endl;
+    c1.getData();
+
+    cout << "--- Enter second complex number ---" << endl;
+    c2.getData();
+
+    result = c1 + c2;  // Using overloaded '+' operator
+
+    cout << "\n--- Result after addition ---" << endl;
+    result.display();
+
+    return 0;
+}
+
+OUTPUT
+--- Enter first complex number ---
+Enter real part: 3
+Enter imaginary part: 2
+--- Enter second complex number ---
+Enter real part: 4
+Enter imaginary part: 5
+
+--- Result after addition ---
+7 + 7i
