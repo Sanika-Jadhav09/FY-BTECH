@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+class Student {
+private:
+    string name;
+    int rollNo;
+    float marks;
+
+public:
+    // Parameterized constructor
+    Student(string n, int r, float m) {
+        name = n;
+        rollNo = r;
+        marks = m;
+    }
+
+    // Function to display student details
+    void display() {
+        cout << "Name: " << name << "\tRoll No: " << rollNo << "\tMarks: " << marks << endl;
+    }
+};
+
+int main() {
+    // Creating objects using parameterized constructor
+    Student s1("Riya", 1, 89.5);
+    Student s2("Amit", 2, 76.0);
+    Student s3("Kiran", 3, 92.3);
+
+    cout << "--- Student Details ---" << endl;
+    s1.display();
+    s2.display();
+    s3.display();
+
+    return 0;
+}
+
+OUTPUT
+--- Student Details ---
+Name: Riya   Roll No: 1   Marks: 89.5
+Name: Amit   Roll No: 2   Marks: 76
+Name: Kiran  Roll No: 3   Marks: 92.3
