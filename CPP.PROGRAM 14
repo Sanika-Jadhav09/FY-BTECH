@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+class MathOperations {
+public:
+    // Function to add two integers
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    // Function to add three integers
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    // Function to add two float numbers
+    float add(float x, float y) {
+        return x + y;
+    }
+};
+
+int main() {
+    MathOperations m;
+
+    cout << "Addition of two integers: " << m.add(5, 10) << endl;
+    cout << "Addition of three integers: " << m.add(2, 4, 6) << endl;
+    cout << "Addition of two float numbers: " << m.add(2.5f, 3.7f) << endl;
+
+    return 0;
+}
+
+OUTPUT
+Addition of two integers: 15
+Addition of three integers: 12
+Addition of two float numbers: 6.2
