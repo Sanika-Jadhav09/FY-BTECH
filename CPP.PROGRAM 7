@@ -1,0 +1,64 @@
+#include <iostream>
+using namespace std;
+
+class Student {
+private:
+    int roll_no;
+    float marks;
+
+public:
+    void getDetails() {
+        cout << "Enter Roll Number: ";
+        cin >> roll_no;
+        cout << "Enter Marks: ";
+        cin >> marks;
+    }
+
+    void displayDetails() {
+        cout << "Roll Number: " << roll_no << "\tMarks: " << marks << endl;
+    }
+};
+
+int main() {
+    int n;
+
+    cout << "Enter number of students: ";
+    cin >> n;
+
+    Student s[n];  // Array of objects
+
+    cout << "\n--- Enter Student Details ---\n";
+    for (int i = 0; i < n; i++) {
+        cout << "\nStudent " << i + 1 << ":\n";
+        s[i].getDetails();
+    }
+
+    cout << "\n--- Student Details ---\n";
+    for (int i = 0; i < n; i++) {
+        s[i].displayDetails();
+    }
+
+    return 0;
+}
+
+OUTPUT
+Enter number of students: 3
+
+--- Enter Student Details ---
+
+Student 1:
+Enter Roll Number: 1
+Enter Marks: 89
+
+Student 2:
+Enter Roll Number: 2
+Enter Marks: 76
+
+Student 3:
+Enter Roll Number: 3
+Enter Marks: 92
+
+--- Student Details ---
+Roll Number: 1    Marks: 89
+Roll Number: 2    Marks: 76
+Roll Number: 3    Marks: 92
