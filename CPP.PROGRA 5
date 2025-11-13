@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+class Student {
+private:
+    string name;
+    int rollNo;
+    long long prn;
+
+public:
+    // Function to input student details
+    void getDetails() {
+        cout << "Enter Student Name: ";
+        cin >> name;
+        cout << "Enter Roll Number: ";
+        cin >> rollNo;
+        cout << "Enter PRN: ";
+        cin >> prn;
+    }
+
+    // Function to display student details
+    void displayDetails() {
+        cout << "\n--- Student Details ---\n";
+        cout << "Name: " << name << endl;
+        cout << "Roll Number: " << rollNo << endl;
+        cout << "PRN: " << prn << endl;
+    }
+};
+
+int main() {
+    Student s1; // create object
+    s1.getDetails();
+    s1.displayDetails();
+    return 0;
+}
+
+
+OUTPUT
+Enter Student Name: Sanika
+Enter Roll Number: 12
+Enter PRN: 1234567890
+
+--- Student Details ---
+Name: Sanika
+Roll Number: 12
+PRN: 1234567890
