@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, arr[5];
+
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
+
+    try {
+        // Division exception
+        if (b == 0)
+            throw "Division by zero not allowed!";
+
+        cout << "Division result: " << (float)a / b << endl;
+
+        // Array index exception
+        int index;
+        cout << "\nEnter array index (0 to 4): ";
+        cin >> index;
+
+        if (index < 0 || index > 4)
+            throw index;
+
+        cout << "Enter value to store at index " << index << ": ";
+        cin >> arr[index];
+
+        cout << "Value stored successfully!" << endl;
+    }
+
+    catch (const char *msg) {
+        cout << "Exception caught: " << msg << endl;
+    }
+    catch (int i) {
+        cout << "Exception caught: Invalid array index " << i << "!" << endl;
+    }
+
+    cout << "\nProgram ended normally." << endl;
+    return 0;
+}
+
+
+OUTPUT
+Enter two numbers: 10 2
+Division result: 5
+
+Enter array index (0 to 4): 3
+Enter value to store at index 3: 50
+Value stored successfully!
+
+Program ended normally.
