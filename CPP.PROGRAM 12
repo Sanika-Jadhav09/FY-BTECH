@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+
+// Base class 1
+class Student {
+protected:
+    int rollNo;
+
+public:
+    void getStudentData() {
+        cout << "Enter Roll Number: ";
+        cin >> rollNo;
+    }
+};
+
+// Base class 2
+class Marks {
+protected:
+    float marks;
+
+public:
+    void getMarksData() {
+        cout << "Enter Marks: ";
+        cin >> marks;
+    }
+};
+
+// Derived class
+class Result : public Student, public Marks {
+public:
+    void displayResult() {
+        cout << "\n--- Student Result ---" << endl;
+        cout << "Roll Number: " << rollNo << endl;
+        cout << "Marks: " << marks << endl;
+    }
+};
+
+// Main function
+int main() {
+    Result r1;
+
+    cout << "--- Enter Student Details ---" << endl;
+    r1.getStudentData();
+    r1.getMarksData();
+
+    r1.displayResult();
+
+    return 0;
+}
+
+OUTPU--- Enter Student Details ---
+Enter Roll Number: 15
+Enter Marks: 89.5
+
+--- Student Result ---
+Roll Number: 15
+Marks: 89.5T
