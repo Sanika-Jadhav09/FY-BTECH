@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+class operation{
+    private:
+    float num;
+    float square;
+    float cube;
+    public:
+    operation(){
+        cout<<"Enter a Number:-";
+        cin>>num;
+        square=num*num;
+        cout<<"square of number is:-"<<square<<endl;
+        cube=num*num*num;
+        cout<<"cube of number:-"<<cube<<endl;
+    }
+};
+int main(){
+    operation o;
+    return 0;
+}
